@@ -17,6 +17,7 @@ main {
 }
 
 #canvas {
+    --gridx: 2;
     height: var(--canvas);
     width: var(--canvas);
     display: flex;
@@ -25,9 +26,8 @@ main {
 }
 
 .pixel {
-    width: 250px;
-    height: 250px;
-    border: 1px solid black;
+    width: calc(var(--canvas)/var(--gridx));
+    height: calc(var(--canvas)/var(--gridx));
     cursor: pointer;
 }
 
