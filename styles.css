@@ -44,6 +44,15 @@ main {
     width: 200px;
     padding: 5px;
     border-radius: 10px;
+    align-items: center;
+    justify-content: space-evenly;
+    height: 150px;
+    font-size: 1.5em;
+}
+
+button {
+    font-size: .8em;
+    padding: 2px;
 }
 
 footer {
@@ -62,52 +71,34 @@ footer {
     color: rgb(237, 186, 201);
 }
 
+@media only screen and (max-width: 700px) {
+    main {
+        display: flex;
+        flex-direction: column;
+        flex-wrap: wrap;
+        justify-content: space-evenly;
+        align-items: center;
+    }
+    #control-panel {
+        margin-bottom: 20px;
+    }
+}
 
 @media only screen and (max-width: 500px) {
 
     #canvas {
         --canvas: 400px;
-        --gridx: 2;
-        height: var(--canvas);
-        width: var(--canvas);
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .pixel {
-        width: calc(var(--canvas)/var(--gridx));
-        height: calc(var(--canvas)/var(--gridx));
-        cursor: pointer;
     }
 }
 @media only screen and (max-width: 400px) {
 
     #canvas {
         --canvas: 300px;
-        --gridx: 2;
-        height: var(--canvas);
-        width: var(--canvas);
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .pixel {
-        width: calc(var(--canvas)/var(--gridx));
-        height: calc(var(--canvas)/var(--gridx));
-        cursor: pointer;
     }
 }
 @media only screen and (max-width: 300px) {
 
     #canvas {
         --canvas: 200px;
-        --gridx: 2;
-        height: var(--canvas);
-        width: var(--canvas);
-        display: flex;
-        flex-wrap: wrap;
-    }
-    .pixel {
-        width: calc(var(--canvas)/var(--gridx));
-        height: calc(var(--canvas)/var(--gridx));
-        cursor: pointer;
     }
 }
