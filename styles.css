@@ -4,25 +4,31 @@
     box-sizing: border-box;
     --primary-gray: rgb(125, 125, 125);
     --button-gray: rgb(194, 178, 178);
-    --canvas: 500px;
 }
-
+header {
+    text-align: center;
+    margin: 50px auto;
+    font-size: 1.5em;
+}
 body {
-    background-color: var(--primary-gray);
+    background: linear-gradient(rgb(237, 186, 201), rgb(116, 116, 159));
 }
 
 main {
     display: flex;
+    flex-wrap: wrap;
     justify-content: space-evenly;
 }
 
 #canvas {
+    background-color: aliceblue;
+    --canvas: 500px;
     --gridx: 2;
     height: var(--canvas);
     width: var(--canvas);
     display: flex;
-    box-shadow: 0px 0px 10px 0px rgb(0, 0, 0);
     flex-wrap: wrap;
+    box-shadow: 0px 0px 20px rgba(0, 0, 0, .5);
 }
 
 .pixel {
@@ -31,8 +37,77 @@ main {
     cursor: pointer;
 }
 
-#control {
+#control-panel {
+    background-color: aliceblue;
     display: flex;
     flex-direction: column;
-    border: 1px solid black;
+    width: 200px;
+    padding: 5px;
+    border-radius: 10px;
+}
+
+footer {
+    height: 20vh;
+}
+.social-icons {
+    margin: auto;
+    width: 400px;
+    margin-top: 100px;
+    display: flex;
+    justify-content: space-evenly;
+    align-items: center;
+}
+.social-icons a{
+    font-size: 4rem;
+    color: rgb(237, 186, 201);
+}
+
+
+@media only screen and (max-width: 500px) {
+
+    #canvas {
+        --canvas: 400px;
+        --gridx: 2;
+        height: var(--canvas);
+        width: var(--canvas);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pixel {
+        width: calc(var(--canvas)/var(--gridx));
+        height: calc(var(--canvas)/var(--gridx));
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 400px) {
+
+    #canvas {
+        --canvas: 300px;
+        --gridx: 2;
+        height: var(--canvas);
+        width: var(--canvas);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pixel {
+        width: calc(var(--canvas)/var(--gridx));
+        height: calc(var(--canvas)/var(--gridx));
+        cursor: pointer;
+    }
+}
+@media only screen and (max-width: 300px) {
+
+    #canvas {
+        --canvas: 200px;
+        --gridx: 2;
+        height: var(--canvas);
+        width: var(--canvas);
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .pixel {
+        width: calc(var(--canvas)/var(--gridx));
+        height: calc(var(--canvas)/var(--gridx));
+        cursor: pointer;
+    }
 }
